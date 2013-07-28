@@ -1,5 +1,5 @@
 package br.com.linkout.modelo;
 
-public class Alunos {
+public class Aluno {
 
 }
