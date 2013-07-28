@@ -1,20 +1,16 @@
 package br.com.linkout.DAO;
 
-import java.util.List;
-
-import javax.persistence.EntityManager;
-
 import br.com.linkout.modelo.Aluno;
-import br.com.linkout.util.FabricaDeConexao;
 
-public class AlunoDAO {
-	
-	EntityManager em = new FabricaDeConexao().getConexao();
 
-	public List<Aluno> obterTodos() {
-		em.getTransaction().begin();
-		//implementar uma query aqui...
-		return null;
+public class AlunoDAO extends GenericDAO<Aluno> {
+
+	private static final long serialVersionUID = 4804236619817977064L;
+
+	public AlunoDAO() {
+		super(Aluno.class);
 	}
+	
+	
 
 }

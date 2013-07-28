@@ -4,14 +4,16 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <properties>
       
-      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver?createDatabaseIfNotExist=true;useUnicode=true;characterEncoding=utf-8"/>
+      <property name="hibernate.connection.driver_class" value="org.gjt.mm.mysql.Driver"/>
       <property name="hibernate.connection.password" value="root"/>
       <property name="hibernate.connection.username" value="root"/>
       <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/testejrs"/>
-	  <property name="hibernate.connection.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect"/>
+      
       <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+      
    </properties>
   </persistence-unit>
-</persistence>
- 
 </persistence>
