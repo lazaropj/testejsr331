@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import br.com.linkout.DAO.AlunoDAO;
 import br.com.linkout.modelo.Aluno;
 
-import org.glassfish.jersey.server.JSONP;
+import com.sun.jersey.api.json.JSONWithPadding;
 
 @Path("/alunos")
 public class AlunoProvider {
@@ -19,12 +19,11 @@ public class AlunoProvider {
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	@JSONP(callback = "testeLazaro", queryParam = "jsonpCallback")
-	public List<Aluno> getAll() {
+	public JSONWithPadding getAll() {
 		dao.beginTransaction();
 		List<Aluno> listaDeAlunos = dao.findAll();
 		dao.closeTransaction();
-		return listaDeAlunos;
+		return new JSONWithPadding(new GenericEntity<Collection<Aluno>>(listaDeAlunos){}, "lazim") ;
 	}
 
 
