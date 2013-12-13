@@ -1,10 +1,12 @@
 package br.com.linkout.aluno;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 
 import br.com.linkout.DAO.AlunoDAO;
