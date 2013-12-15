@@ -75,13 +75,17 @@
 			<version>2.4.1</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- if you are using Jersey client specific features -->
 		<dependency>
-			<groupId>org.glassfish.jersey.core</groupId>
-			<artifactId>jersey-client</artifactId>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
 			<version>2.4.1</version>
-			<scope>provided</scope>
 		</dependency>
+		
+<dependency>
+    <groupId>org.glassfish.jersey.media</groupId>
+    <artifactId>jersey-media-json-processing</artifactId>
+    <version>2.4.1</version>
+</dependency>
 
 		<dependency>
 			<groupId>asm</groupId>
