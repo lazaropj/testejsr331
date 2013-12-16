@@ -26,7 +26,7 @@ public class AlunoProvider {
 	private AlunoDAO dao = new AlunoDAO();
 
 	@GET
-	@JSONP(callback = "eval", queryParam = "jsonpCallback")
+	@JSONP(callback = "eval", queryParam = "callback")
 	@Produces({"application/javascript","application/json"})
 	
 	public JsonObject getAll() {
